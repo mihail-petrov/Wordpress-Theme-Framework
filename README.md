@@ -7,15 +7,15 @@ It is fully customisable and can serve as a start point for every developer
 
 It contains the following entities
 
-============================
+---------------------------------
 Basic Wordpress theme files
-============================
+---------------------------------
 1. style.css
 2. index.php
 
-=================================
+---------------------------------
 Template files
-=================================
+---------------------------------
 
 1. home.php 
 2. single.php
@@ -23,22 +23,22 @@ Template files
 4. sidebar.php 	
 5. 404.php
 
-=================================
+---------------------------------
 Utility files
-=================================
+---------------------------------
 
 1. header.php
 2. footer.php
 
-=================================
+---------------------------------
 Functions complementing the theme
-=================================
+---------------------------------
 1. functions.php
-	-- customm excerpt
-	-- home page menu
-	-- category unlinked
-	-- remove more link
-	-- [wordpress] menu registration
-	-- [wordpress] sidebar registration
-	-- pagination 
-	-- external script loader
+	* customm excerpt
+	* home page menu
+	* category unlinked
+	* remove more link
+	* [wordpress] menu registration
+	* [wordpress] sidebar registration
+	* pagination 
+	* external script loader
