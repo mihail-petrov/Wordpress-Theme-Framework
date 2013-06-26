@@ -1,0 +1,64 @@
+/*
+   Theme Name: TEMPLATE NAME
+   Author: Mihail Petrov
+   Author URI: http://mihail-petrov.cloudvps.com/
+*/
+
+
+/*==========================================*/
+/*              STYLE RESET
+/*==========================================*/
+
+html, body, div, span,h1, h2, h3, h4, h5, h6, p, a, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,article, aside, figure, figcaption, footer, header, hgroup,
+menu, nav, section, summary, time{
+    margin          : 0;
+    padding         : 0;
+    border          : 0;
+    font-size       : 100%;
+    font            : inherit;
+    vertical-align  : baseline;
+
+    -moz-box-sizing     : border-box;
+    -webkit-box-sizing  : border-box;
+    box-sizing          : border-box;
+}
+
+
+article, aside, figcaption, figure,
+footer, header, hgroup, nav, section {
+    display : block;
+}
+
+ol, ul {
+    list-style  : none;
+}
+
+a{
+    text-decoration : none;
+}
+
+img{
+    border  : none;
+}
+
+/*==========================================*/
+/*               GENERAL STYLE
+/*==========================================*/
+
+/*==========================================*/
+/*               WEB HEADER
+/*==========================================*/
+
+
+/*==========================================*/
+/*               WEB CONTENT
+/*==========================================*/
+
+/*==========================================*/
+/*               WEB FOOTER
+/*==========================================*/
+
+/*==========================================*/
+/*               STYLE CLASSES
+/*==========================================*/
