@@ -1,6 +1,6 @@
 <?php
 /*==========================================*/
-/*               WORDPRESS FETURS
+/*            WORDPRESS FETURS
 /*==========================================*/
 
 // Enable post thumbnail in Wordpress admin pannel
@@ -49,6 +49,7 @@ function custom_excerpt_length($length) {
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 
+
 /**
  * [new_excerpt_more description]
  * @param  [type] $more [description]
@@ -72,6 +73,34 @@ function home_page_menu_args( $args ) {
 }
 add_filter( 'wp_page_menu_args', 'home_page_menu_args' );
 
+
+/**
+ * [is_custom_post_type description]
+ * @param  string  $type [description]
+ * @return boolean       [description]
+ */
+function is_custom_post_type( $type = '' ) {
+  
+  // access to currently queried post
+    global $post;
+    
+    // get the current post type
+    $post_type = get_post_type( $post );
+    
+    // all post types that aren't custom
+    $types = array("post", "page", "revision", "attachment");
+    
+    // check if current post type is custom
+    if ( $type == '' && in_array($type, $types)) {
+        return true;
+    } 
+    else if ( $type == $post_type ) {
+        return true;
+    } 
+    else {
+        return false;
+    }
+}
 
 /*==========================================*/
 /*                STYLE FUNCTIONS
@@ -108,9 +137,6 @@ function the_category_unlinked($separator = ' ') {
 /*                WORDPRESS MENU
 /*==========================================*/
 
-/**
- * 
- */
 function register_my_menus() {
     register_nav_menus(
             array('header-menu'     => __('Header Menu'),
@@ -126,11 +152,12 @@ add_action('init', 'register_my_menus');
 /*                WORDPRESS SIDEBAR
 /*==========================================*/
 
-/**
- * 
- */
 if (function_exists('register_sidebar')) {
-    register_sidebar(array('name' => __('Widget sidebar', 'theme_text_domain'), 'id' => 'custom'));
+    register_sidebar(
+        array(
+              'name' => __('Widget sidebar', 'theme_text_domain'),
+              'id' => 'custom')
+        );
 }
 
 
@@ -148,11 +175,14 @@ function pagination() {
     echo '</div>';
 }
 
+
 /*==========================================*/
 /*                LOAD JQUERY
 /*==========================================*/
 
-if (!is_admin()) add_action("wp_enqueue_scripts", "jquery_enqueue", 11);
+if (!is_admin()) {
+  add_action("wp_enqueue_scripts", "jquery_enqueue", 11);  
+} 
 
 function jquery_enqueue() {
     wp_deregister_script('jquery');

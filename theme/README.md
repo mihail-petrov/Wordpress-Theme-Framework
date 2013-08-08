@@ -42,3 +42,5 @@ Functions complementing the theme
 	* [wordpress] sidebar registration
 	* pagination 
 	* external script loader
+	* wordpress functions extended custom HEADER BG
+	* wordpress functions extended custom BACKGROUND COLOR
