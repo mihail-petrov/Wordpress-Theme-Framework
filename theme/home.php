@@ -4,7 +4,7 @@
 
 <!-- WEB CONTENT -->
 
-<div id="webContent">
+<div id="web_content">
 
     <!-- SET WORDPRESS LOOP THROW THE POSTS. -->
     <?php// if (have_posts()) : while (have_posts()) : the_post(); ?>

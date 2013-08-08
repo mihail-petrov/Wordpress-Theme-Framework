@@ -19,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!--[if lt IE 9]>
-            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+            <script src="http://ie9-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
         <![endif]-->
         
         <?php wp_head(); ?> 
